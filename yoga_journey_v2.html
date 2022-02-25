@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🧘🏽‍♀️ Yoga Journey</title>
+
+    <style>
+      h1 {
+        color: #ffffff;
+        font-weight: 900;
+        font-size: 70px;
+        margin-left: 20px;
+        margin-top: 0px;
+        display: inline-block;
+        cursor: pointer;
+      }
+      
+      h3 {
+        padding-top: 10px;
+        margin-bottom: 0px;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-size: x-large;
+      }
+
+      body {
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+        margin: 0px;
+        padding: 0px;
+        display: block;
+      }
+
+      ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+        text-align: -webkit-match-parent;
+      }
+     .journey {
+        background: #000000;
+        color: #ffffff;
+        font-size: 25px;
+        font-weight: 500;
+        display: block;
+        margin: 20px auto;
+        padding: 10px 30px;
+        border: none;
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+        align-items: flex-start;
+        box-sizing: border-box;
+      }
+      .journey:hover {
+        color: black;
+        background: white;
+        border: 1px solid #bbbbbb;
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+      }
+      p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        line-height: 25px;
+        font-size: 16px;
+      }
+      small {
+        font-size: 10px;
+      }
+      strong {
+        font-size: 12px;
+      }
+      .item-click:hover {
+        color: rgb(253, 252, 201);
+        transition: all 800ms ease;
+      }
+
+      .main-header {
+        background-image: url(https://s1.1zoom.me/b5050/231/Waterfalls_Yoga_444431_1920x1200.jpg);
+        background-color: #ededed;
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        margin-top: 0px;
+      }
+      .header-name {
+        position: relative;
+        top: 75px;
+      }
+      .menu-container {
+        display: block;
+      }
+      .menu-bar {
+        text-align: center;
+        margin-bottom: 0;
+         padding: 0;
+    margin-top: 0;
+    background-color: black;
+      }
+      .menu-item {
+        color: white;
+        text-transform: uppercase;
+        display: inline-block;
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+        padding: 10px;
+           
+      }
+      .item-click {
+        padding: 10px;
+      }
+      .article-img {
+        border-radius: 5px;
+        width: 100%;
+      }
+      .article-container1,
+      .article-container2,
+      .article-container3 {
+        padding: 15px;
+        margin-bottom: 10px;
+        flex: 1;
+        box-sizing: border-box;
+        transition: all 200ms ease-in-out;
+      }
+      .article-container1:hover {
+        border-radius: 10px;
+        background-color: rgb(240, 240, 240);
+      }
+      .article-container2:hover {
+        border-radius: 10px;
+        background-color: rgb(240, 240, 240);
+      }
+      .article-container3:hover {
+        border-radius: 10px;
+        background-color: rgb(240, 240, 240);
+      }
+      .blog-container {
+        min-width: 900px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        align-content: space-between;
+      }
+      .article-links {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+        padding: 0;
+      }
+      .link {
+        background: #000000;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 8px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+        display: inline-block;
+        padding: 8px 6px;
+        margin: 3px 0;
+        border-radius: 2px;
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+        list-style: none;
+        text-align: -webkit-match-parent;
+      }
+
+      .link:hover {
+        background: white;
+        color: black;
+      }
+
+      .bottom-hr {
+        background: #000000;
+        height: 5px;
+        border-width: 0px;
+        max-width: 600px;
+        margin: 5px auto;
+        display: block;
+        unicode-bidi: isolate;
+        margin-block-start: 0.5em;
+        margin-block-end: 0.5em;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        overflow: hidden;
+        border-style: inset;
+      }
+      .footer {
+        max-width: 1500px;
+        margin: 0 auto;
+        background: linear-gradient(
+          0deg,
+          rgba(202, 202, 202, 1) 0%,
+          rgba(237, 237, 237, 1) 60%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        padding-left: 10px;
+      }
+      .coded-by {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 0px;
+      }
+      .a-read-more {
+        cursor: pointer;
+        text-decoration: none;
+        font-family: monospace;
+        color: #a76dcb;
+      }
+      .a-read-more:hover {
+        color: #5e3c74;
+        font-weight: bold;
+      }
+      .contact1 {
+        max-width: 15px;
+      }
+      .contact2 {
+        max-width: 13px;
+      }
+      .a-contact {
+        text-decoration: none;
+      }
+     .message {
+         text-align: center;
+     }
+     .thank-you {
+         text-align: center;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 0;
+     }
+
+
+    </style>
+  </head>
+  <body>
+    <!--HEADER-->
+    <div class="main-header">
+      <div class="header-name">
+        <h1>
+          Yoga
+          <br />
+          Journey
+        </h1>
+      </div>
+    </div>
+
+    <!--MENU BAR-->
+    <div class="menu-container">
+      <ul class="menu-bar">
+        <li class="menu-item">
+          <span class="item-click">Home </span>
+         
+        </li>
+         <li class="menu-item">
+             ✨
+         </li>
+
+        <li class="menu-item">
+          <span class="item-click">Practice</span>
+         
+        </li>
+         <li class="menu-item">
+              ✨
+         </li>
+        <li class="menu-item">
+          <span class="item-click">Meditation</span>
+         
+        </li>
+         <li class="menu-item">
+              ✨
+         </li>
+        <li class="menu-item">
+          <span class="item-click">Chakras</span>
+          
+        </li>
+         <li class="menu-item">
+              ✨
+         </li>
+        <li class="menu-item">
+          <span class="item-click">Sanskrit</span>
+        
+        </li>
+         <li class="menu-item">
+              ✨
+         </li>
+        <li class="menu-item">
+          <span class="item-click">Pose finder</span>
+         
+        </li>
+
+         </li>
+        
+      </ul>
+    </div>
+
+    <!--BLOG-->
+    <div class="blog-container">
+      <!--Article 1-->
+      <div class="article-container1">
+        <img
+          src="https://www.yogajournal.com/wp-content/uploads/2018/01/conversation-couple.jpg?crop=535:301&width=1070&enable=upscale"
+          alt="couple talking"
+          class="article-img"
+        />
+        <div class="article-content">
+          <ul class="article-links">
+            <li class="link">psychology</li>
+            <li class="link">society</li>
+            <li class="link">good life</li>
+          </ul>
+          <h3>
+            Do You Filter Your Feelings? Elevate Your Communication to Connect
+            to Your Self
+          </h3>
+          <p>
+            Without realizing it, you may cover up your feelings by using
+            communication filters, which can come in the forms of words, body
+            language, and actions. When a close friend asks, “What’s wrong?” and
+            you unreflectively smile and say, “Nothing,” you might be closing
+            yourself off from your real feelings. Shutting the door to your
+            inner world in this way prevents you from fully experiencing life,
+            connecting with your personal values and making choices that help
+            you live in alignment with them—all part of what I call “internal
+            activism.”
+            <br /><span class="read-more">
+              <a
+                class="a-read-more"
+                href="https://www.yogajournal.com/yoga-101/kriya-yoga-communication-filters/"
+                target="_blank"
+              >
+                Read more
+              </a></span
+            >
+          </p>
+        </div>
+      </div>
+
+      <!--Article 2-->
+      <div class="article-container2">
+        <img
+          src="https://media.istockphoto.com/photos/group-of-athletic-women-stretching-during-exercise-class-at-heat-club-picture-id1324877095?b=1&k=20&m=1324877095&s=170667a&w=0&h=yQt17mBH_t-PL-7WRIaoEPJogZRoJtqlI2J3FP5na3Y="
+          alt="yoga class"
+          class="article-img"
+        />
+        <div class="article-content">
+          <ul class="article-links">
+            <li class="link">mental health</li>
+            <li class="link">science</li>
+            <li class="link">society</li>
+          </ul>
+          <h3>
+            Growing Medical Recognition of Yoga as a Treatment for Anxiety
+          </h3>
+          <p>
+            Perceived stress and anxiety can be a normal and healthy response to
+            life circumstances. But for some, the fast pace and uncertainty of
+            modern society causes debilitating levels of stress and anxiety.
+            Chronic, unmanaged stress hurts our quality of life and is
+            responsible for an increase in health issues and disorders across
+            the world. It is a psycho-social crisis that has been accelerated by
+            the COVID-19 pandemic.
+            <br /><span class="read-more">
+              <a
+                class="a-read-more"
+                href="https://dailycup.yoga/2021/01/22/growing-medical-recognition-of-yoga-as-a-treatment-for-anxiety/"
+                target="_blank"
+              >
+                Read more
+              </a></span
+            >
+          </p>
+        </div>
+      </div>
+
+      <!--Article 3-->
+      <div class="article-container3">
+        <img
+          src="https://www.theladders.com/wp-content/uploads/happy-190806.jpg"
+          alt="woman smiling"
+          class="article-img"
+        />
+        <div class="article-content">
+          <ul class="article-links">
+            <li class="link">good life</li>
+            <li class="link">svadhyaya</li>
+            <li class="link">practice</li>
+          </ul>
+          <h3>
+            The Secret to Getting Out of a Rut & Into Living Your Most Vibrant,
+            Authentic Life
+          </h3>
+          <p>
+            When our spiritual lives and day-to-day actions are out of sync, we
+            lose the ability to intuit. Yes, intuit as a verb. (As Deepak Chopra
+            said, “There are no nouns in this alive universe.”) The less we
+            intuit, the more disconnected we are from our selves, and the more
+            inert we feel. The solution to this is internal activism, a practice
+            of many parts including svadhyaya, or self-study.
+            <br /><span class="read-more">
+              <a
+                class="a-read-more"
+                href="https://www.yogajournal.com/yoga-101/spirituality/svadhyaya-getting-out-of-a-rut-and-living-your-most-authentic-life/"
+                target="_blank"
+              >
+                Read more
+              </a></span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER-->
+    <hr class="bottom-hr" />
+    <div class="footer">
+      <h3 class="message"></h3>
+      <h3 class="thank-you"></h3>
+      <button class="journey">Begin your journey!</button>
+      <p class="coded-by">
+        <small>Coded by </small>
+        <strong>Weronika Jaskuła</strong>
+        <a
+          class="a-contact"
+          href="https://www.linkedin.com/in/weronika-jaskuła-3a3b47142/"
+          target="_blank"
+        >
+          <img
+            src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"
+            alt="linkedin link"
+            class="contact1"
+          />
+        </a>
+
+        <a
+          class="a-contact"
+          href="https://www.instagram.com/w.jaskula/"
+          target="_blank"
+        >
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+          alt=instagram link" class="contact2">
+        </a>
+      </p>
+    </div>
+
+    <!--JS-->
+
+    <script>
+       function subscribe () {
+            let name = prompt ("Hi there!👋 WHat is your name?");
+            let email = prompt ("Please tell us your email address💌");
+
+           let message = document.querySelector(".message");
+           message.innerHTML = `Hi ${name}! Happy to see you'd like to join our community!💛`;
+
+           let thankYou = document.querySelector(".thank-you");
+           thankYou.innerHTML = `We have dropped you an email to ${email}. Thank you so much for subscribing and namaste🙏🏽`;
+
+        }
+    
+
+       let button = document.querySelector("button");
+        button.addEventListener("click", subscribe);
+
+    </script>
+  </body>
+</html>
